@@ -1,0 +1,344 @@
+@font-face {
+	font-family: 'FA';
+	src: url(../font/fontawesome-webfont.woff);
+}
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+h3 {
+	font-weight: bold;
+	line-height: 25px;
+}
+td {
+	vertical-align: middle;
+}
+
+/*Icons*/
+i {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin: 2px;
+	position: relative;
+}
+.tool i:hover {
+	cursor: pointer;	
+	background: #EEE;
+}
+
+i:before {
+	font-family: 'FA';
+	font-size: 20px;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+}
+
+.icon-arrows:before {
+	content: '\f047';
+}
+.icon-plus-circle:before {
+	content: '\f055';
+}
+.icon-minus-circle:before {
+	content: '\f056';
+}
+.icon-apple:before {
+	content: '\f179';
+}
+.icon-android:before {
+	content: '\f17b';
+}
+.icon-arrow-circle-down:before {
+	content: '\f0ab';
+}
+.icon-arrow-circle-up:before {
+	content: '\f0aa';
+}
+.icon-female:before {
+	content: '\f182';
+}
+.icon-male:before {
+	content: '\f183';
+}
+body {
+	background: #ECECEC;
+	font-family: 'Lucida Grande', 'Ubuntu', 'Segoe UI', 'Arial', sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+body.spacebar {
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+}
+body.spacebar.mousedown {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+}
+
+#top-menu {
+	height: 22px;
+	background: url(../img/top-menu-bg.png) repeat-x;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1000;
+	font-weight: bold;
+}
+#top-menu > ul > li {
+	float: left;
+	position: relative;
+}
+#top-menu > ul > li:hover {
+	background: #999;
+}
+#top-menu li a {
+	text-decoration: none;
+	color: #333;
+	padding: 0px 10px;
+	display: inline-block;
+	line-height: 22px;
+}
+
+#top-menu > ul > li > ul {
+	position: absolute;
+	top: 22px;
+	width: 200px;
+	background-color: #FFF;
+	padding-bottom: 10px;
+	border: 1px solid #EEE;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+	display: none;
+}
+#top-menu > ul > li > ul a {
+	display: block;	
+	line-height: 30px;
+	font-weight: normal;
+}
+#top-menu > ul > li > ul li:hover {
+	background: #EEE;
+}
+#top-menu > ul li:hover > ul {
+	display: block;
+}
+
+.box {
+	box-sizing: border-box;
+	background-color: #E2E2E2;
+	position: fixed;
+	z-index: 900;
+	width: 250px;
+	border: 1px solid #D9D9D9;
+}
+.box-heading {
+	height: 16px;
+	color: #ECECEC;
+	line-height: 16px;
+	padding-left: 10px;
+	background: url(../img/box-heading-bg.png) no-repeat top left;
+}
+
+#properties-palette {
+	right: 50px;
+	top: 50px;
+	height: 220px;
+}
+#properties-palette .box-content {
+	padding: 5px;
+}
+#properties-table {
+	width: 100%;
+}
+
+#layers-palette {
+	right: 50px;
+	top: 280px;
+	height: 200px;
+}
+
+#toolbox {
+	left: 30px;
+	top: 50px;
+	height: 400px;
+	width: 42px;
+	background: url(../img/toolbox-bg.png) no-repeat top left #E2E2E2;
+}
+#toolbox .box-heading {
+	padding-left: 0;
+	text-align: center;
+}
+#toolbox .box-content {
+	text-align: center;
+}
+
+#editor {
+	background: #FFF;
+	border: 1px solid #D9D9D9;
+	position: fixed;
+	top: 50px;
+	left: 150px;
+	overflow: hidden;
+}
+#editor .tool {
+	width: 22px;
+	background: #DDD;
+	position: absolute;
+	right: 0px;
+	z-index: 100;
+	opacity: 0.5;
+}
+#editor .tool i {
+	width: 22px;
+	height: 22px;
+	margin: 0;
+}
+#editor .tool i:before {
+	font-size: 12px;
+}
+#chart-container {
+	position: relative;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+.chart {
+	width: 600px;
+	height: 400px;
+	position: relative;
+}
+.chart .item {
+	position: absolute;
+}
+.chart .item:hover {
+	box-shadow: 0px 0px 1px #000;
+}
+.comparison-chart .container-a {
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	top: 250px;
+	left: 0px;
+}
+.comparison-chart .container-b {
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	top: 250px;
+	right: 0px;
+}
+.comparison-chart .title {
+	width: 100%;
+	text-align: center;
+	top: 100px !important;
+}
+.comparison-chart i:before {
+	font-size: 40px;
+}
+.comparison-chart .subtitle {
+	display: block;
+	width: 50%;
+	text-align: center;
+	top: 200px;
+}
+.comparison-chart .subtitle-b {
+	left: 50%;
+}
+
+#color-palette {
+	top: 20%;
+	width: 234px;
+	right: 50%;
+	box-shadow: 0px 0px 40px #888;
+	overflow: hidden;
+	display: none;
+}
+.color-btn {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #333;
+}
+
+#icon-palette {
+	top: 20%;
+	right: 50%;
+	box-shadow: 0px 0px 40px #888;
+	display: none;
+}
+#icon-palette i:hover {
+	background: #EEE;
+}
+#preview {
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	z-index: 1000;
+	display: none;
+}
+#preview canvas {
+	margin: 0 auto;
+	display: block;
+}
+#close-preview-btn {
+	width: 32px;
+	height: 32px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background: url(../img/close-btn.png) no-repeat top left transparent;
+	cursor: pointer;
+}
